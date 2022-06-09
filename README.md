@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This rails app demonstrates that `sti_preload` as documented in
+[Autoloading and Reloading Constants](https://guides.rubyonrails.org/v7.0/autoloading_and_reloading_constants.html#single-table-inheritance) breaks since rails 7.0.
 
-Things you may want to cover:
+To see this, run `rails db:create db:migrate db:seed && rails server` and go to
+http://localhost:3000.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Uncomment the line marked `FIXME` in `lib/sti_preload.rb` for a very hacky
+workaround.
